@@ -1,0 +1,399 @@
+/* =================================
+ROOT
+================================= */
+
+:root{
+  --title:#350B16;
+  --container:1200px;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html,body{
+  height:100%;
+}
+
+body{
+  margin:0;
+  padding:0;
+  font-family:"Indie Flower",cursive;
+}
+
+
+/* =================================
+HERO
+================================= */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  min-height:100vh;
+}
+
+.hero__bg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:-2;
+}
+
+/* NAV */
+
+.hero__header{
+  position:absolute;
+  top:18px;
+  left:0;
+  right:0;
+  z-index:5;
+}
+
+.nav{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  font-size:18px;
+  padding:0 16px;
+  font-family:"Indie Flower",cursive;
+}
+
+.nav__link{
+  color:#000;
+  text-decoration:none;
+  padding:8px 10px;
+}
+
+.nav__link:hover{
+  text-decoration:underline;
+  text-underline-offset:6px;
+}
+
+
+/* HERO CONTAINER */
+
+.hero__container{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:96px 16px 40px;
+  position:relative;
+  z-index:2;
+}
+
+.hero__content{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  align-items:flex-start;
+}
+
+
+/* HERO TEXT */
+
+.hero__text{
+  margin-left:85px;
+  margin-top:84px;
+}
+
+.hero__title{
+  margin:0 0 18px 0;
+  font-family:"Ingrid Darling",cursive;
+  font-size:100px;
+  line-height:1;
+  color:var(--title);
+  display:inline-block;
+  opacity:0;
+
+  animation:
+          fairyFade 1.6s ease forwards,
+          fairyFloat 2.8s ease-in-out 1.6s infinite;
+}
+
+.hero__subtitle{
+  margin:0;
+  font-family:"Indie Flower",cursive;
+  font-size:25px;
+  line-height:1.25;
+  max-width:616px;
+  color:#000;
+}
+
+
+/* HERO IMAGE */
+
+.hero__image{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+
+.hero__image img{
+  width:min(430px,90vw);
+  height:auto;
+}
+
+
+/* CHERRIES */
+
+.hero__cherry{
+  position:absolute;
+  height:auto;
+  z-index:3;
+  pointer-events:none;
+}
+
+.hero__cherry--left{
+  top:8px;
+  left:18px;
+  width:140px;
+
+  transform-origin:50% 0%;
+
+  animation:cherrySwingLeft 2s ease-in-out infinite;
+}
+
+.hero__cherry--right{
+  top:190px;
+  right:80px;
+  width:140px;
+
+  transform-origin:22% 0%;
+
+  animation:cherrySwingRight 1.7s ease-in-out infinite;
+}
+
+
+/* =================================
+ANIMATED NAME BANNER
+================================= */
+
+.name-banner,
+.name-strip{
+  width:100%;
+  height:45px;
+  background:white;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  left:0;
+}
+
+.name-banner{
+  position:absolute;
+  bottom:0;
+}
+
+.name-strip{
+  position:relative;
+  margin-top:80px;
+}
+
+.name-banner__track,
+.name-strip__track{
+  display:flex;
+  gap:120px;
+  white-space:nowrap;
+  width:max-content;
+  animation:bannerMove 55s linear infinite;
+}
+
+.name-banner__track span,
+.name-strip__track span{
+  font-family:"Ingrid Darling",cursive;
+  font-size:20px;
+  color:#f2a7b9;
+}
+
+
+/* =================================
+WHO AM I SECTION
+================================= */
+
+.who{
+  background:#350B16;
+  padding:120px 0 40px;
+  position:relative;
+}
+
+.who-container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 40px;
+}
+
+.who-title{
+  font-family:"Indie Flower",cursive;
+  font-size:70px;
+  color:white;
+  text-align:center;
+  margin-bottom:80px;
+}
+
+.who-content{
+  display:grid;
+  grid-template-columns:388px 475px;
+  column-gap:95px;
+  justify-content:center;
+  align-items:center;
+}
+
+.who-phone img{
+  width:500px;
+  height:auto;
+  display:block;
+}
+
+.who-text{
+  font-family:"Indie Flower",cursive;
+  font-size:25px;
+  color:white;
+  line-height:1.35;
+  max-width:475px;
+}
+
+.who-text p{
+  margin-bottom:26px;
+}
+
+.who-text strong{
+  font-weight:normal;
+}
+
+
+/* =================================
+DESKTOP
+================================= */
+
+@media (min-width:900px){
+
+  .nav{
+    gap:56px;
+    font-size:20px;
+  }
+
+  .hero__container{
+    padding:96px 40px 80px;
+  }
+
+  .hero__content{
+    display:grid;
+    grid-template-columns:minmax(620px,1fr) 457px;
+    column-gap:70px;
+    align-items:start;
+  }
+
+  .hero__image{
+    justify-content:flex-start;
+    align-self:start;
+    margin-top:160px;
+    transform:translateX(-200px);
+  }
+
+  .hero__image img{
+    width:700px;
+  }
+
+  .hero__cherry--right{
+    top:230px;
+    right:110px;
+    width:141px;
+  }
+
+}
+
+
+/* =================================
+MOBILE
+================================= */
+
+@media (max-width:900px){
+
+  .hero__title{
+    font-size:68px;
+  }
+
+  .hero__subtitle{
+    font-size:22px;
+  }
+
+  .hero__image{
+    justify-content:center;
+    transform:none;
+  }
+
+  .hero__image img{
+    width:min(460px,88vw);
+  }
+
+  .hero__cherry--right{
+    top:120px;
+    right:12px;
+    width:100px;
+  }
+
+  .who-content{
+    grid-template-columns:1fr;
+    row-gap:40px;
+    text-align:left;
+  }
+
+  .who-phone img{
+    width:320px;
+    margin:auto;
+  }
+
+  .who-title{
+    font-size:50px;
+  }
+
+  .who-text{
+    font-size:22px;
+  }
+
+  .name-strip{
+    margin-top:60px;
+  }
+
+}
+
+
+/* ======
+ANIMATIONS
+================================= */
+
+@keyframes bannerMove{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
+}
+
+@keyframes fairyFade{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes fairyFloat{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-6px);}
+  100%{transform:translateY(0);}
+}
+
+@keyframes cherrySwingLeft{
+  0%{transform:rotate(-7deg);}
+  50%{transform:rotate(7deg);}
+  100%{transform:rotate(-7deg);}
+}
+
+@keyframes cherrySwingRight{
+  0%{transform:rotate(8deg);}
+  50%{transform:rotate(-8deg);}
+  100%{transform:rotate(8deg);}
+}
