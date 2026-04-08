@@ -6,12 +6,13 @@
 
     <title>Aja Al Asadi Portfolio</title>
 
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Ingrid+Darling&family=Holtwood+One+SC&family=Inria+Serif&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/sccs.css" />
 </head>
 
 <body>
@@ -36,7 +37,7 @@
 
 
 
-    </div>
+
     <!-- Baggrund -->
     <img class="hero__bg" src="img/banner.svg" alt="" aria-hidden="true">
 
@@ -59,11 +60,11 @@
         <div class="hero__content">
 
             <div class="hero__text">
-                <h1 class="hero__title">Aja al asadi</h1>
-
+                <h1 class="hero__title" id="typewriter"></h1>
+                <h1 class="hero__title" id="typewriter">Aja Al Asadi</h1>
                 <p class="hero__subtitle">
-                    My name is Aja, im 23 years old and<br>
-                    I design digital solutions with a focus on aesthetics and functionality!
+                    My name is Aja, I'm 23 years old and I design digital solutions with a focus on aesthetics and functionality!<br>
+                    I am a <span id="changing-text"></span>
                 </p>
             </div>
 
@@ -86,7 +87,7 @@
 </section>
 
 <!-- Om mig sektion -->
-<section class="who" id="about">
+<section class="who reveal" id="about">
     <div class="who-container">
         <h2 class="who-title">Who am i?</h2>
 
@@ -124,29 +125,119 @@
         </div>
     </div>
 
-    <!-- Banner under om mig -->
-    <div class="name-strip" aria-hidden="true">
-        <div class="name-strip__track">
-            <span>Aja Al Asadi</span>
-            <span>Aja Al Asadi</span>
-            <span>Aja Al Asadi</span>
-            <span>Aja Al Asadi</span>
-            <span>Aja Al Asadi</span>
-            <span>Aja Al Asadi</span>
-            <span>Aja Al Asadi</span>
-            <span>Aja Al Asadi</span>
-            <span>Aja Al Asadi</span>
-            <span>Aja Al Asadi</span>
-            <span>Aja Al Asadi</span>
-            <span>Aja Al Asadi</span>
-            <span>Aja Al Asadi</span>
-        </div>
-    </div>
-</section>
+
+
+
 
 <!-- Resume sektion -->
-<section class="resume" id="resume">
-    <!-- Her sætter vi din resume mockup ind bagefter -->
+
+
+<!-- Banner under om mig -->
+<div class="name-strip" aria-hidden="true">
+    <div class="name-strip__track">
+        <span>Aja Al Asadi</span>
+        <span>Aja Al Asadi</span>
+        <span>Aja Al Asadi</span>
+        <span>Aja Al Asadi</span>
+        <span>Aja Al Asadi</span>
+        <span>Aja Al Asadi</span>
+        <span>Aja Al Asadi</span>
+        <span>Aja Al Asadi</span>
+        <span>Aja Al Asadi</span>
+        <span>Aja Al Asadi</span>
+        <span>Aja Al Asadi</span>
+        <span>Aja Al Asadi</span>
+        <span>Aja Al Asadi</span>
+    </div>
+</div>
+</section>
+
+
+<section class="resume reveal" id="resume">
+    <div class="resume-clean">
+
+        <img class="resume-clean__cherry" id="cherry" src="img/kirsebær.svg" alt="" aria-hidden="true">
+
+        <h2 class="resume-clean__title">Resume</h2>
+
+        <div class="resume-clean__top">
+            <div class="resume-clean__photo-wrap">
+                <img class="resume-clean__photo" src="img/kat.png" alt="Portræt af Aja">
+            </div>
+
+            <div class="resume-clean__top-right">
+                <div class="resume-clean__skills">
+                    <h3 class="resume-clean__heading resume-clean__heading--skills">SKILLS</h3>
+
+                    <div class="resume-clean__pill skill-1">Social media content &amp; content creation</div>
+                    <div class="resume-clean__pill skill-2">Visual design &amp; brand identity</div>
+                    <div class="resume-clean__pill skill-3">Social media management</div>
+                    <div class="resume-clean__pill skill-4">Content &amp; campaign planning</div>
+                    <div class="resume-clean__pill skill-5">Basic coding (HTML &amp; CSS)</div>
+                </div>
+
+                <div class="resume-clean__tools">
+                    <h3 class="resume-clean__heading resume-clean__heading--tools">TOOLS</h3>
+
+                    <div class="resume-clean__pill resume-clean__pill--tool">HTML &amp; CSS</div>
+                    <div class="resume-clean__pill resume-clean__pill--tool">Figma</div>
+                    <div class="resume-clean__pill resume-clean__pill--tool resume-clean__pill--tool-small">Canva</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="resume-clean__bottom">
+            <div class="resume-clean__profile">
+                <h3 class="resume-clean__heading">PROFIL</h3>
+
+                <p class="resume-clean__text">
+                    I am a Multimedia Design student on
+                    my 2nd semester with a strong interest
+                    in visual design, user experience, and
+                    digital solutions. I work creatively and in
+                    a structured way, with a focus on
+                    aesthetics, usability, and clear
+                    communication.
+                </p>
+
+                <p class="resume-clean__text resume-clean__text--second">
+                    I am motivated by creating visual
+                    identities and digital designs that
+                    support a brand and communicate
+                    directly with the target audience.
+                </p>
+            </div>
+
+            <div class="resume-clean__right-column">
+                <div class="resume-clean__education">
+                    <h3 class="resume-clean__heading">EDUCATION</h3>
+
+                    <div class="resume-clean__education-item">
+                        <p class="resume-clean__school">Multimedia Design Køge ZBC Academy</p>
+                        <span class="resume-clean__year">2025-2027</span>
+                    </div>
+
+                    <div class="resume-clean__curve" aria-hidden="true"></div>
+
+                    <div class="resume-clean__education-item resume-clean__education-item--second">
+                        <p class="resume-clean__school">Upper Secondary Education Greve Gymnasium</p>
+                        <span class="resume-clean__year">2019-2022</span>
+                    </div>
+                </div>
+
+                <div class="resume-clean__experience">
+                    <h3 class="resume-clean__heading">EXPERIENCE &amp; PROJECTS</h3>
+
+                    <ul class="resume-clean__list">
+                        <li>Study-related projects within web design and social media branding</li>
+                        <li>Development of visual identities and digital solutions</li>
+                        <li>Working with target groups, user research, and idea development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </section>
 
 <script src="script.js"></script>
